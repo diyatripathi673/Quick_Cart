@@ -9,11 +9,14 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/auth/signup", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://quick-cart-teal-sigma.vercel.app/auth/signup",
+        {
+          name,
+          email,
+          password,
+        }
+      );
 
       alert("Signup successful, please login");
       console.log(res.data);

@@ -19,7 +19,7 @@ const Home = () => {
     }
 
     axios
-      .get("http://localhost:3000/products", {
+      .get("https://quick-cart-teal-sigma.vercel.app/products", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setProducts(res.data))
@@ -45,7 +45,7 @@ const Home = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/products",
+        "https://quick-cart-teal-sigma.vercel.app/products",
         { name: newName, price: newPrice },
         { headers: { Authorization: `Bearer ${token}` } }
       );
