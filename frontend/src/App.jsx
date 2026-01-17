@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
-
+import Cart from "./pages/Cart";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +12,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<h2>404: Page Not Found</h2>} />
       </Routes>
     </BrowserRouter>
   );

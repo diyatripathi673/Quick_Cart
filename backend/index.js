@@ -4,7 +4,7 @@ import connectdb from "./config/db.js";
 import cors from "cors";
 import AuthRouter from "./routes/AuthRouter.js";
 import ProductRouter from "./routes/ProductRoute.js";
-
+import cartRoute from "./routes/CartRoute.js";
 dotenv.config();
 
 const app = express();
@@ -16,6 +16,7 @@ app.use(express.json()); // body-parser ki jagah
 // Routes
 app.use("/auth", AuthRouter);
 app.use("/products", ProductRouter);
+app.use("/api/cart", cartRoute);
 // DB connect
 connectdb();
 
